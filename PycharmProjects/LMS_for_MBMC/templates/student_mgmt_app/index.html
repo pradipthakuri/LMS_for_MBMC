@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<!-- Inform Django template system about using static media -->
+{% load staticfiles %}
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Student Management App</title>
+</head>
+<body>
+    <h1>welcome to Madan Bhandari LMS.</h1>
+    Hello World<strong>{{ welcomeMessage }}</strong>
+
+    <br>
+    <!-- Defining static files location -->
+    <img src="{% static "images/mbmc_logo.jpg" %}" alt="Logo of MBMC" />
+
+    <br>
+    <table>
+        <form method="POST" action="student_mgmt_app/">
+            <tr>
+                <td>
+                    <label>Student ID: </label>
+                </td>
+                <td><input type="text" name="student_id" placeholder="Student ID No" required></td>
+            </tr>
+            <tr>
+                <td>
+                    <label>First Name: </label>
+                </td>
+                <td><input type="text" name="first_name" placeholder="First Name" required></td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Last Name: </label>
+                </td>
+                <td><input type="text" name="last_name" placeholder="Last Name" required></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Save">
+                </td>
+            </tr>
+
+
+            </form>
+        </table>
+</body>
+</html>
